@@ -10,8 +10,8 @@
 #include "author.h"
 #include "floatingwindow.h"
 #include <QTimer>
-#define defaultPosx "0"
-#define defaultPosy "0"
+#define defaultPosx "243"
+#define defaultPosy "864"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }

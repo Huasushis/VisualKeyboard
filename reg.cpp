@@ -43,10 +43,10 @@ void Reg::init()
     tt->SetValue("Orig","path",noname);
     tt->SetValue("Orig","start","false");
     tt->SetValue("Orig","show_message","true");
-    tt->SetValue("WinSetting","bgColor","#ff000000");
+    tt->SetValue("WinSetting","bgColor","#7c000000");
     tt->SetValue("WinSetting","wdColor","#ffffffff");
-    tt->SetValue("WinSetting","posx","0");
-    tt->SetValue("WinSetting","posy","0");
+    tt->SetValue("WinSetting","posx","243");
+    tt->SetValue("WinSetting","posy","864");
     tt->WriteINI("vk.ini");
 }
 
