@@ -10,7 +10,10 @@
 #include <algorithm>
 #include "listenkeyboard.h"
 #include <ctime>
+#include <QFont>
 #include <QFontMetrics>
+#include <QTimer>
+#include <QRect>
 #define AnimationTime 201
 
 using namespace std;
@@ -59,7 +62,7 @@ private slots:
     void showEvent(QShowEvent *event);
     void closeEvent(QCloseEvent *event);
     void caslot();
-
+    void Ontimeover();
 };
 
 #endif // FLOATINGWINDOW_H

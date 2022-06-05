@@ -9,6 +9,7 @@ FloatingWindow::FloatingWindow(QWidget *parent) :
       ui(new Ui::FloatingWindow)
 {
     ui->setupUi(this);
+
     this->setWindowFlags(Qt::FramelessWindowHint|Qt::Tool);
     setAttribute(Qt::WA_TranslucentBackground,true);
     this->show();
@@ -20,6 +21,14 @@ FloatingWindow::FloatingWindow(QWidget *parent) :
     vkinit();
     prestiky=pretext=0;
     LastUpdateTime=0;
+    tim = new QTimer();
+    tim->setInterval(1);
+    connect(tim,SIGNAL(timeout()),this, SLOT(Ontimeover()));
+    tim->start();
+}
+
+void FloatingWindow::Ontimeover(){
+    SetWindowPos((HWND)this->winId(), HWND_TOPMOST, 0, 0, 0, 0, SWP_NOSIZE | SWP_NOMOVE | SWP_NOACTIVATE);
 }
 
 FloatingWindow::~FloatingWindow()
@@ -269,8 +278,12 @@ void FloatingWindow::updatekey(){
     if(ui->nowb->text()!=QString::fromStdString(nows)){
         ui->nowb->setText(QString::fromStdString(nows));
         ui->preb->setText(QString::fromStdString(pres));
-        QFontMetrics fontMetrics(font());
-        this->resize(max(fontMetrics.width(ui->nowb->text())+65,101),101);
+        QFont font;
+        font.setFamily("SimSun");
+        font.setPointSize(18);
+        QFontMetrics fm(font);
+        QRect rec=fm.boundingRect(ui->nowb->text());
+        this->resize(max(rec.width()+40,101),101);
     }
 
 }
