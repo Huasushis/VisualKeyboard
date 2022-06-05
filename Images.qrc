@@ -1,2 +1,7 @@
-<!DOCTYPE RCC>
-<RCC version="1.0"/>
+<RCC>
+    <qresource prefix="/Images"/>
+    <qresource prefix="/">
+        <file>pics/1648374415.png</file>
+        <file>pics/pic.ico</file>
+    </qresource>
+</RCC>

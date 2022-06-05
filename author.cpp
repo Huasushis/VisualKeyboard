@@ -6,6 +6,7 @@ author::author(QWidget *parent) :
     ui(new Ui::author)
 {
     ui->setupUi(this);
+    setFixedSize(this->width(), this->height());
 }
 
 author::~author()

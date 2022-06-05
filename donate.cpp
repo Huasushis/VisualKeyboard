@@ -6,6 +6,7 @@ donate::donate(QWidget *parent) :
     ui(new Ui::donate)
 {
     ui->setupUi(this);
+    setFixedSize(this->width(), this->height());
 }
 
 donate::~donate()

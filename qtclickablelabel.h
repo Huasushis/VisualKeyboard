@@ -2,10 +2,24 @@
 #define QTCLICKABLELABEL_H
 
 
-class QtClickableLabel
+#include <QLabel>
+
+class QtClickableLabel : public QLabel
 {
+    Q_OBJECT
+
 public:
-    QtClickableLabel();
+    explicit QtClickableLabel(QWidget *parent = 0);
+    explicit QtClickableLabel(const QString &text = "", QWidget *parent = 0);
+    ~QtClickableLabel();
+
+signals:
+    void clicked();
+    void doubleclicked();
+
+protected:
+    void mouseDoubleClickEvent(QMouseEvent *event);
+    void mousePressEvent(QMouseEvent *event);
 };
 
 #endif // QTCLICKABLELABEL_H

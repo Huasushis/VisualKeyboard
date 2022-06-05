@@ -1,0 +1,65 @@
+#if defined(UNDER_CE)
+#include <winbase.h>
+#else
+#include <winver.h>
+#endif
+
+
+IDI_ICON   ICON  "pic.ico"
+
+#define VER_FILEVERSION             1,0,0,0
+#define VER_FILEVERSION_STR         "1.0.0.0\0"
+
+#define VER_PRODUCTVERSION          1,0,0,0
+#define VER_PRODUCTVERSION_STR      "1.0\0"
+
+#ifndef DEBUG
+#define VER_DEBUG                   0
+#else
+#define VER_DEBUG                   VS_FF_DEBUG
+#endif
+
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION     VER_FILEVERSION
+PRODUCTVERSION  VER_PRODUCTVERSION
+FILEFLAGSMASK   0x3fL
+#ifdef _DEBUG
+    FILEFLAGS VS_FF_DEBUG
+#else
+    FILEFLAGS 0x0L
+#endif
+FILEOS          VOS__WINDOWS32
+FILETYPE        VFT_DLL
+FILESUBTYPE     0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "CompanyName","Huasushis"
+            VALUE "FileDescription","Show Keyboard Visually"
+            VALUE "FileVersion","1.0.0.0"
+            VALUE "InternalName","VisualKeyboard"
+            VALUE "LegalCopyRight","Copyright (C) 2022 Huasushis Individual"
+            VALUE "LegalTrademarks1","Huasushis(Simple Future Tense)"
+            VALUE "LegalTrademarks2","混氏新子（等几年再说）"
+            VALUE "OriginalFilename","VisualKeyboard.exe"
+            VALUE "ProductName","VisualKeyboard"
+            VALUE "ProductVersion","1.0"
+            END
+                END
+
+                BLOCK "VarFileInfo"
+                BEGIN
+                    /* The following line should only be modified for localized versions.     */
+                    /* It consists of any number of WORD,WORD pairs, with each pair           */
+                    /* describing a language,codepage combination supported by the file.      */
+                    /*                                                                        */
+                    /* For example, a file might have values "0x409,1252" indicating that it  */
+                    /* supports English language (0x409) in the Windows ANSI codepage (1252). */
+
+                    VALUE "Translation", 0x804, 1200
+
+                END
+            END

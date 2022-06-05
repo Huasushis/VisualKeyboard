@@ -1,7 +1,7 @@
-<?xml version='1.0'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>author</class>
- <widget name="author" class="QDialog">
+ <widget class="QDialog" name="author">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,9 +11,31 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>作者</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="Images.qrc">
+    <normaloff>:/pics/pic.ico</normaloff>:/pics/pic.ico</iconset>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>40</y>
+     <width>261</width>
+     <height>151</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>混氏新子巨巨巨！</string>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;混氏新子巨巨巨！&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Huasushis is grand!&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;开源地址：&lt;/span&gt;&lt;a href=&quot;https://github.com/Huasushis/VisualKeyboard&quot;&gt;&lt;span style=&quot; color:#ffee00;&quot;&gt;VisualKeyboard&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;我的网站：&lt;/span&gt;&lt;a href=&quot;https://huasushis.github.io&quot;&gt;&lt;span style=&quot; color:#ff0000;&quot;&gt;huasushis.github.io&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="Images.qrc"/>
+ </resources>
  <connections/>
 </ui>
